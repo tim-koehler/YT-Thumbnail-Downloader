@@ -7,9 +7,6 @@ namespace YouTubeThumbnailDownloader
 {
     public static class Downloader
     {
-        //private static string VideoIdentifier { get; set; }
-        private static Image Thumbnail { get; set; }
-
         /// <summary>
         /// Return full size Thumbnail
         /// </summary>
@@ -17,24 +14,14 @@ namespace YouTubeThumbnailDownloader
         /// <returns></returns>
         public static Image GetThumbnail(string url)
         {
-            return Thumbnail;
-        }
-
-        /// <summary>
-        /// Returns image for preview PictureBox
-        /// </summary>
-        /// <param name="url"></param>
-        /// <returns>Thumbnail Url</returns>
-        public static Image GetThumbnailPreview(string url)
-        {
             string videoIdentifier = GetVideoIdentifier(url);
 
             if (String.IsNullOrEmpty(videoIdentifier))
                 return null;
 
-            Thumbnail = DownloadThumbnail(videoIdentifier);
+            Image thumbnail = DownloadThumbnail(videoIdentifier);
 
-            return ScaleImage(Thumbnail);
+            return thumbnail;
         }
 
         #region Private Methods
@@ -69,28 +56,6 @@ namespace YouTubeThumbnailDownloader
             memStream.Close();
 
             return thumbnail;
-        }
-
-        /// <summary>
-        /// Scales the Thumbnail for the preview Window
-        /// </summary>
-        /// <param name="image">Image to Scale</param>
-        /// <returns>Scaled Image</returns>
-        private static Image ScaleImage(Image image)
-        {
-            double ratioX = (double)303 / image.Width;
-            double ratioY = (double)179 / image.Height;
-            double ratio = Math.Min(ratioX, ratioY);
-
-            int newWidth = (int)(image.Width * ratio);
-            int newHeight = (int)(image.Height * ratio);
-
-            Bitmap newImage = new Bitmap(newWidth, newHeight);
-
-            using (Graphics graphics = Graphics.FromImage(newImage))
-                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
-
-            return newImage;
         }
 
         /// <summary>

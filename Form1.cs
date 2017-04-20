@@ -8,6 +8,8 @@ namespace YouTubeThumbnailDownloader
 {
     public partial class Form1 : Form
     {
+        private static Image Thumbnail { get; set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +27,11 @@ namespace YouTubeThumbnailDownloader
             Settings.Default.Save();
         }
 
+        private void buttonPaste_Click(object sender, EventArgs e)
+        {
+            textBoxUrl.Text = Clipboard.GetText();
+        }
+
         private void linkLabelGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/RaZorfalkon");
@@ -34,10 +41,10 @@ namespace YouTubeThumbnailDownloader
         {
             if (!String.IsNullOrEmpty(textBoxUrl.Text))
             {
-                Image previewThumbnail = Downloader.GetThumbnailPreview(textBoxUrl.Text);
+                Thumbnail = Downloader.GetThumbnail(textBoxUrl.Text);
 
-                if (previewThumbnail != null)
-                    pictureBoxPreview.Image = previewThumbnail;
+                if (Thumbnail != null)
+                    pictureBoxPreview.Image = Thumbnail;
                 else
                     pictureBoxPreview.Image = Resources.NoUrlImage;
             }
@@ -62,12 +69,10 @@ namespace YouTubeThumbnailDownloader
                 return;
             }
 
-            Image thumbnail = Downloader.GetThumbnail(textBoxUrl.Text);
-
-            if (thumbnail == null)
+            if (Thumbnail == null)
                 return;
 
-            if (SaveThumbnail(thumbnail, textBoxPath.Text))
+            if (SaveThumbnail(textBoxPath.Text))
                 MessageBox.Show("Download Successfully");
         }
         #endregion
@@ -79,7 +84,7 @@ namespace YouTubeThumbnailDownloader
         /// </summary>
         /// <param name="thumbnail">Image to Save</param>
         /// <param name="location">Path</param>
-        private bool SaveThumbnail(Image thumbnail, string location)
+        private bool SaveThumbnail(string location)
         {
             if (File.Exists(location))
             {
@@ -100,7 +105,7 @@ namespace YouTubeThumbnailDownloader
             byte[] imageToByteArray()
             {
                 MemoryStream ms = new MemoryStream();
-                thumbnail.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                Thumbnail.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 return ms.ToArray();
             }
         }
