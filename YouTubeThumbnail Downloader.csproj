@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,7 +89,8 @@
     <None Include="Resources\NoUrlImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\favicon.ico" />
+    <Content Include="Resources\copy-icon.png" />
+    <Content Include="Resources\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,12 +7,3 @@ C:\Users\koe61930\Dropbox\Programmieren\YouTubeThumbnailDownloader\YouTubeThumbn
 C:\Users\koe61930\Dropbox\Programmieren\YouTubeThumbnailDownloader\YouTubeThumbnailDownloader\obj\Release\YouTubeThumbnail Downloader.csproj.GenerateResource.Cache
 C:\Users\koe61930\Dropbox\Programmieren\YouTubeThumbnailDownloader\YouTubeThumbnailDownloader\obj\Release\YouTubeThumbnail Downloader.exe
 C:\Users\koe61930\Dropbox\Programmieren\YouTubeThumbnailDownloader\YouTubeThumbnailDownloader\obj\Release\YouTubeThumbnail Downloader.pdb
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\bin\Release\YouTubeThumbnail Downloader.exe.config
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\bin\Release\YouTubeThumbnail Downloader.exe
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\bin\Release\YouTubeThumbnail Downloader.pdb
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Release\YouTubeThumbnail Downloader.csprojResolveAssemblyReference.cache
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Release\YouTubeThumbnailDownloader.Form1.resources
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Release\YouTubeThumbnailDownloader.Properties.Resources.resources
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Release\YouTubeThumbnail Downloader.csproj.GenerateResource.Cache
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Release\YouTubeThumbnail Downloader.exe
-C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Release\YouTubeThumbnail Downloader.pdb

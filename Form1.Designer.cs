@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxUrl = new System.Windows.Forms.TextBox();
-            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             this.textBoxPath = new System.Windows.Forms.TextBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.buttonDownload = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.labelUrl = new System.Windows.Forms.Label();
             this.linkLabelGitHub = new System.Windows.Forms.LinkLabel();
+            this.buttonPaste = new System.Windows.Forms.Button();
+            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,20 +45,9 @@
             // 
             this.textBoxUrl.Location = new System.Drawing.Point(12, 26);
             this.textBoxUrl.Name = "textBoxUrl";
-            this.textBoxUrl.Size = new System.Drawing.Size(304, 20);
+            this.textBoxUrl.Size = new System.Drawing.Size(271, 20);
             this.textBoxUrl.TabIndex = 0;
             this.textBoxUrl.TextChanged += new System.EventHandler(this.textBoxUrl_TextChanged);
-            // 
-            // pictureBoxPreview
-            // 
-            this.pictureBoxPreview.ErrorImage = global::YouTubeThumbnailDownloader.Properties.Resources.NoUrlImage;
-            this.pictureBoxPreview.Image = global::YouTubeThumbnailDownloader.Properties.Resources.NoUrlImage;
-            this.pictureBoxPreview.InitialImage = null;
-            this.pictureBoxPreview.Location = new System.Drawing.Point(13, 53);
-            this.pictureBoxPreview.Name = "pictureBoxPreview";
-            this.pictureBoxPreview.Size = new System.Drawing.Size(303, 179);
-            this.pictureBoxPreview.TabIndex = 1;
-            this.pictureBoxPreview.TabStop = false;
             // 
             // textBoxPath
             // 
@@ -111,11 +101,34 @@
             this.linkLabelGitHub.Text = "GitHub/RaZorfalkon";
             this.linkLabelGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGitHub_LinkClicked);
             // 
+            // buttonPaste
+            // 
+            this.buttonPaste.Image = global::YouTubeThumbnailDownloader.Properties.Resources.copy_icon;
+            this.buttonPaste.Location = new System.Drawing.Point(291, 24);
+            this.buttonPaste.Name = "buttonPaste";
+            this.buttonPaste.Size = new System.Drawing.Size(25, 23);
+            this.buttonPaste.TabIndex = 7;
+            this.buttonPaste.UseVisualStyleBackColor = true;
+            this.buttonPaste.Click += new System.EventHandler(this.buttonPaste_Click);
+            // 
+            // pictureBoxPreview
+            // 
+            this.pictureBoxPreview.ErrorImage = global::YouTubeThumbnailDownloader.Properties.Resources.NoUrlImage;
+            this.pictureBoxPreview.Image = global::YouTubeThumbnailDownloader.Properties.Resources.NoUrlImage;
+            this.pictureBoxPreview.InitialImage = null;
+            this.pictureBoxPreview.Location = new System.Drawing.Point(13, 53);
+            this.pictureBoxPreview.Name = "pictureBoxPreview";
+            this.pictureBoxPreview.Size = new System.Drawing.Size(303, 179);
+            this.pictureBoxPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPreview.TabIndex = 1;
+            this.pictureBoxPreview.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 310);
+            this.Controls.Add(this.buttonPaste);
             this.Controls.Add(this.linkLabelGitHub);
             this.Controls.Add(this.labelUrl);
             this.Controls.Add(this.buttonDownload);
@@ -146,5 +159,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Label labelUrl;
         private System.Windows.Forms.LinkLabel linkLabelGitHub;
+        private System.Windows.Forms.Button buttonPaste;
     }
 }
