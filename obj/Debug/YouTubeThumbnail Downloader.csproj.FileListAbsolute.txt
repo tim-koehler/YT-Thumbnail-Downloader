@@ -16,3 +16,8 @@ C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThum
 C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnail Downloader.csproj.GenerateResource.Cache
 C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnail Downloader.exe
 C:\Users\koe61930\Documents\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnail Downloader.pdb
+C:\Users\koe61930\Dropbox\Programmieren\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnail Downloader.csprojResolveAssemblyReference.cache
+C:\Users\koe61930\Dropbox\Programmieren\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnailDownloader.Form1.resources
+C:\Users\koe61930\Dropbox\Programmieren\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnail Downloader.csproj.GenerateResource.Cache
+C:\Users\koe61930\Dropbox\Programmieren\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnail Downloader.exe
+C:\Users\koe61930\Dropbox\Programmieren\GitHub\YT-Thumbnail-Downloader\obj\Debug\YouTubeThumbnail Downloader.pdb
